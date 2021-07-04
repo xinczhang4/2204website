@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DesignPage</title>
+    <style>
+        body{
+            background-color:rgba(248, 230, 172, 0.4);
+        }
+        head{
+            font-style:oblique;
+        }
+        dt{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+    <h1>Design Page</h1>
+    <p>Name:Zhang Xinchen<br/>SID:56200220</p>
+    </div>
+    <div id="event">
+    <h3>Event handler</h3> 
+    <p>1.onclick index.js line 72 <br/>
+       2.addEventListener index.js line 82-97
+    </p>   
+    </div>
+    <div id="common">
+    <h3>Commom Style</h3>
+    <form name="common">
+        1.Background images (url as follows)<br/>
+        http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%AF%BF%E5%8F%B8%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87&step_word=&hs=0&pn=10&spn=0&di=92180&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3032930817%2C1417405711&os=2152622282%2C2807733527&simid=4135120484%2C535503486&adpicid=0&lpn=0&ln=1107&fr=&fmq=1572581340878_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F63a282e14246ee8f847703ce5d9c9497a96caec4c2fe3-ERhowO_fw658&fromurl=ippr_z2C%24qAzdH3FAzdH3Fi7wkwg_z%26e3Bv54AzdH3FrtgfAzdH3Fc0a08ldccAzdH3F&gsm=&rpstart=0&rpnum=0&islist=&querylist=&force=undefined
+        <br/><br/>http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%AF%BF%E5%8F%B8%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87&step_word=&hs=0&pn=51&spn=0&di=29920&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1938550378%2C3951807391&os=2186978733%2C2812738462&simid=3480176618%2C193810682&adpicid=0&lpn=0&ln=1107&fr=&fmq=1572581340878_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fblog%2F201507%2F12%2F20150712045127_wFyJd.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B17tpwg2_z%26e3Bv54AzdH3Fks52AzdH3F%3Ft1%3D909mnd9dl&gsm=&rpstart=0&rpnum=0&islist=&querylist=&force=undefined
+        <br/>
+    </form>
+    <p>
+        2.A header with background color and round-cornered border.
+        <br/>(The header will transite when cursor moves on it.)
+    </p>
+    <p>
+        3.A footer with a link to the design page.
+    </p>
+    </div>
+    <div>
+        <h3>Free Design</h3>
+        <dl>
+            <dt>(m) use of positioning schemes:</dt>
+                <dd>A position:relative to set the order list in the center in the center of the screen.(OrderPage line144)</dd> 
+            <dt>(n) apply 2 different kinds of CSS3 techniques:</dt>
+                <dd>1.round corner<br/>
+                    Common.css: header block border(line 14)<br/>
+                    Course work.html:Information block(line 18), Promotion block(line 32)<br/>
+                    Order page.html:Menu block(line 21), Ordered List block(line 90), Tabs(line 41)<br/>
+                </dd>
+                <dd>
+                    2.Transition:The header can extend when cursor moves on it.(Common.css line 17)
+                </dd>
+            <dt>(o) how styles are grouped into style sheet(s)/embedded style:</dt>
+                <dd>Common styles are grouped as external css.(See the <a href="#common">Commom style</a> before.)</dd>
+                <dd>Other css styles are set as embedded styles in the html page, with a sequence "first used first set".</dd>
+        </dl>
+    </div>
+</body>
+</html>

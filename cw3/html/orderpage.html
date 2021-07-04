@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+        h1,p{
+            text-align: center;
+        }
+        #sushihead{
+            display:inline-block;
+        }
+        header h1{
+            display:inline-block;
+        }
+        #menu{
+            border:1px solid;
+            border-radius: 10px;
+            padding: 0 2% 1% 2%;
+            width:48%;
+            float:left;
+            background-image: url(../images/image2.jpg);
+            background-repeat:repeat-x;
+            background-size: auto 100%;
+        }
+        #Sushi,#Drink,#Dessert{
+            border:1px solid;
+            width:96%;
+            height:50%;
+            padding:2%;
+            display:none;
+        }
+        .tablinks{
+            display:inline-block;
+            width:32.72%;
+            height:2rem;
+            text-align:center;
+            border-top-left-radius:15px;
+            border-top-right-radius:15px;
+            background:rgba(248, 230, 172, 0.9);
+            border-color:black;
+            margin:0;
+            padding-bottom:0.5rem;
+        }
+        #tab1:hover,#tab2:hover,#tab3:hover{
+            background-color:rgb(255, 255, 255);
+            border-color:black;
+        }
+        .tabActive{
+            background-color:rgb(255, 255, 255);
+            border-color:black;
+        }
+        #menu .active{
+            background-color:rgb(152, 211, 250,0.2);
+            display:block;
+        }
+        #Sushi:hover,#Drink:hover,#Dessert:hover{
+            display:block;
+        }
+        #img1,#img2,#img3,#img4,#img8{
+            border:1px solid;
+            display:inline-block;
+            width:30.9%;
+            padding:1%;
+        }
+        #img1{
+            float:left;
+        }
+        #img3{
+            float:right;
+        }
+        #img5,#img6,#img7{
+            border:1px solid;
+            display:inline-block;
+            width:30%;
+            padding:1%;
+        }
+        .textbox{
+            width:60%;
+        }
+        #Ordered-List{
+            border:1px solid;
+            border-radius: 10px;
+            padding: 0 2% 1% 2%;
+            width:40%;
+            height: 412px;
+            float:right;
+            background-image: url(../images/image2.jpg);
+            background-repeat:repeat-x;
+            background-size: auto 100%;
+        }
+        #table{
+            text-align:center;
+            height: 273px;
+            overflow-y:scroll;
+        }
+        table{
+            margin:auto;
+            width:200px;
+            text-align: center;
+        }
+        
+        .caption{
+            background-color: peru;
+        }
+        .head,.foot{
+            background-color: #888888;
+        }
+        #tbody tr:nth-of-type(odd){
+            background-color: #DDDDDD;
+        }
+        #tbody tr:nth-of-type(even){
+            background-color: #AAAAAA;
+        }
+        /* .odd{
+            background-color: #DDDDDD;
+        }
+        .even{
+            background-color: #AAAAAA;
+        } */
+        .item{
+            text-align: center;
+        }
+        .num{
+            text-align: center;
+        }
+        #undo{
+            text-align: center;
+            color:black;
+        }
+        a:hover{
+            color:black;
+        }
+        @media print{
+            .noprint{
+                display:none;
+            }
+            #Ordered-List,#header{
+                border:none;
+                text-align:center;
+                width:auto;
+                margin:0 auto;
+            }
+            header{
+                zoom:65%;
+            }
+            table{
+                position:relative;
+                right:100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <header id="header">
+            <img id="sushihead" src="../images/Sushi-64.png" width="105" height="85" alt="city sushi">
+            <h1>CITY SUSHI</h1>
+    </header>
+    <div id="menu" class="noprint">
+        <h1>Menu</h1>
+        <div id="tab1" class="tablinks tabActive">
+            <p>
+                <strong>
+                    Sushi
+                </strong>
+            </p>
+        </div>
+        <div id="tab2" class="tablinks">
+            <p>
+                <strong>
+                    Drink
+                </strong>
+            </p>
+        </div>
+        <div id="tab3" class="tablinks">
+            <p>
+                <strong>
+                    Dessert
+                </strong>
+            </p>
+        </div>
+        <!-- Tab content -->
+        <div id="Sushi" class="tabcontent active">
+            <form id="img1">
+                <img src="../images/sushi-1.jpg" alt="sushiA">
+                <input class="textbox" type="number" id="number1" name="number" value="" />
+                <button type="button" onclick="add(this)">Add</button>
+            </form>
+
+            <form id="img2">
+                <img src="../images/sushi-2.jpg" alt="sushiB">
+                <input class="textbox" type="number" id="number2" name="number" value="" />
+                <button type="button" onclick="add(this)">Add</button>
+            </form>
+        
+            <form id="img3">
+                <img src="../images/sushi-3.jpg" alt="sushiC">
+                <input class="textbox" type="number" id="number3" name="number" value="" />
+                <button type="button" onclick="add(this)" >Add</button>
+            </form>
+
+            <form id="img4">
+                <img src="../images/sushi-4.jpg" alt="sushiD">
+                <input class="textbox" type="number" id="number4" name="number" value="" />
+                <button type="button" onclick="add(this)">Add</button>
+            </form>
+        </div>
+          
+        <div id="Drink" class="tabcontent ">
+            <form id="img5">
+                <img src="../images/drink-1.jpg" alt=" drinkA">
+                <input class="textbox" type="number" id="number5" name="number" value="" />
+                <button type="button" onclick="add(this)">Add</button>
+            </form>
+
+            <form id="img6">
+                <img src="../images/drink-2.jpg" alt="drinkB">
+                <input class="textbox" type="number" id="number6" name="number" value="" />
+                <button type="button" onclick="add(this)">Add</button>
+            </form>
+            <form id="img7">
+                <img src="../images/drink-3.jpg" alt="drinkC">
+                <input class="textbox" type="number" id="number7" name="number" value="" />
+                <button type="button" onclick="add(this)">Add</button>
+            </form>
+        </div>
+          
+        <div id="Dessert" class="tabcontent">
+            <form id="img8">
+                <img src="../images/dessert-1.jpg" alt="DessertA">
+                <input class="textbox" type="number" id="number8" name="number" value="" />
+                <button type="button"  onclick="add(this)">Add</button>
+            </form>
+        </div>
+    </div>
+    <div id="Ordered-List">
+        <h1 class="noprint">Ordered List</h1>
+            <p class="noprints">2019年 12月 7日 星期日 21:1:10</p>
+        <div id="table">
+        <table class="tables">
+            <caption class="caption">Table:4-No.of Guests 3</caption>
+            <thead>
+                <tr class="head">
+                    <td class="item">Description</td>
+                    <td class="nums">Qty</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr class="odd">
+                    <td class="item">salmon  sushi roll</td>
+                    <td class="num" >4</td>
+                </tr>
+                <tr class="even">
+                    <td class="item">sushi combo</td>
+                    <td class="num" >2</td>
+                </tr>
+                <tr class="odd">
+                    <td class="item">tuna sushi</td>
+                    <td class="num" >1</td>
+                </tr>
+                <tr class="odd">
+                    <td class="item">tuna sushi</td>
+                    <td class="num">1</td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <tr class="foot">
+                    <td class="item">Total</td>
+                    <td class="numes">7</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+        <div id="undo" class="noprint">
+                <!-- dummy.html -->
+               <a href="javascript:;">undo</a>
+        </div>
+    </div>
+
+    <!-- Page Footer-->
+    <footer class="noprint">
+            <p>©CityU 2019 sources of images and text from Wikimedia Commoms and Courtesy of <mark>Icon pack by Icons8;</mark>designed by <a href="designpage.html">CS2204</a></p>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+</html>

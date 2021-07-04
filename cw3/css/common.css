@@ -1,0 +1,33 @@
+body{
+    margin: 5%;
+    height:95%;
+    background-image: url(../images/image1.jpg);
+    background-repeat:repeat-x;
+    background-size: auto 100%;
+}
+header{
+    position:static;
+    text-align: center;
+    margin:3% auto;
+    width: 40%;
+    border: 1px solid;
+    border-radius: 20px;
+    font:italic;
+    font-size:20px;
+    background-color: rgba(248, 230, 172, 0.4);
+    transition-property:width;
+    transition-duration:2s;
+}
+header:hover{
+    width:60%;
+}
+#sushi{
+    display:inline-block;
+}
+header h1{
+    display:inline-block;
+}
+footer{
+    clear:both;
+    padding:1%;
+}
